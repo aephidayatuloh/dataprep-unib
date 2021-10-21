@@ -104,3 +104,11 @@ final_dt <- member %>%
                              TRUE ~ 1))
 
 final_dt
+
+
+# Ekspor Data -------------------------------------------------------------
+
+library(writexl)
+
+final_dt %>% 
+  write_xlsx("data/final data prep.xlsx")
