@@ -66,6 +66,13 @@ trx_tbl %>%
   filter(month(TransactionDatetime) == 1) %>% 
   arrange(desc(TransactionDatetime))
 
+# Distinct ----------------------------------------------------------------
+
+trx_tbl %>% 
+  distinct(FKMemberID)
+
+trx_tbl %>% 
+  distinct(FKMemberID, .keep_all = TRUE)
 
 # Select ------------------------------------------------------------------
 
@@ -74,7 +81,6 @@ trx_tbl %>%
 
 trx_tbl %>% 
   select(-c(ProductID, SubProductID, TransactionDatetime))
-
 
 # Mutate ------------------------------------------------------------------
 
